@@ -1,16 +1,18 @@
-import secrets
-import sys
-from json import JSONDecodeError
+# Plain imports
+import sys, secrets
 from typing import Any, Dict, Union, Optional
+from json import JSONDecodeError
 
+# Module imports
 import discord
-from discord import Member, DMChannel, TextChannel, Message
+from discord import Member, Message, DMChannel, TextChannel
 from discord.ext import commands
 
-from aiohttp import ClientResponseError, ClientResponse
+from aiohttp import ClientResponse, ClientResponseError
 from motor.motor_asyncio import AsyncIOMotorClient
 from pymongo.errors import ConfigurationError
 
+# Custom imports
 from core.models import InvalidConfigError, getLogger
 
 logger = getLogger(__name__)
